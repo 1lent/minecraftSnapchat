@@ -1,0 +1,4 @@
+name: snapchat
+version: '1.0'
+main: com.lent.snapchat.Main
+api-version: '1.20'
