@@ -13,15 +13,15 @@ import revxrsal.commands.annotation.Command
 import revxrsal.commands.bukkit.annotation.CommandPermission
 
 class Main : JavaPlugin() {
-
     companion object {
         lateinit var plugin: Main private set
-        val item = Item()
+        lateinit var Keys: Keys
+        lateinit var item: Item
     }
-
-
     override fun onEnable() {
         plugin = this
+        Keys = Keys()
+        item = Item()
         val foundation = Foundations.setup(this)
         logger.info("Snapchat plugin has been enabled successfully!")
         val snapChatEvents = SnapChatEvents()
@@ -29,14 +29,11 @@ class Main : JavaPlugin() {
         foundation.registerCommands(this)
 
     }
-
-
-
     @Command("snapchat")
     @CommandPermission("snapchat.conversation")
     fun onCommand(sender: CommandSender) {
         val player = sender as Player
         player.inventory.addItem(item.snapbook)
-     }
+    }
 
 }
