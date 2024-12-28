@@ -15,7 +15,7 @@ class Item {
             val meta = itemMeta as BookMeta
             meta.title = "Snapchat App"
             meta.author = "System"
-            meta.pages = listOf("Welcome to Snapchat! Start writing your messages here!")
+            meta.pages = listOf("Welcome to Snapchat! Start writing your messages here! ")
             meta.addItemFlags(ItemFlag.HIDE_ENCHANTS)
             meta.addEnchant(Enchantment.ARROW_DAMAGE, 1, true)
             meta.persistentDataContainer.set(Main.Keys.CUSTOM_BOOK, PersistentDataType.BOOLEAN, true)
